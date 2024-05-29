@@ -1,12 +1,22 @@
-import { Controller, Get } from "@nestjs/common";
+import { Body, Controller, Get, Post } from "@nestjs/common";
 import { UserService } from "./user.service";
+import { ApiTags } from "@nestjs/swagger";
+import { CreateUserInput } from "./model/create-user.input";
 
+@ApiTags("users")
 @Controller()
 export class UserController {
-  constructor(private readonly appService: UserService) {}
+  constructor(private readonly userService: UserService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  async getUsers() {
+    return await this.userService.getUsers();
+  }
+
+  @Post()
+  async createUser(@Body() input: CreateUserInput) {
+    const user = await this.userService.createUser(input);
+
+    return user;
   }
 }

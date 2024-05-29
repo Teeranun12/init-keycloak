@@ -7,14 +7,13 @@ dotenvConfig({ path: ".env" });
 const config = {
   type: "postgres",
   host: process.env.DATABASE_HOST || "localhost",
-  port: process.env.DATABASE_PORT || 5433,
+  port: process.env.DATABASE_PORT || 5432,
   username: process.env.DATABASE_USERNAME || "postgres",
   password: process.env.DATABASE_PASSWORD || "password",
-  database: process.env.DATABASE_DATABASE || "postgres",
+  database: process.env.DATABASE_DATABASE || "init-keycloak",
   entities: ["dist/**/*.entity{.ts,.js}"],
-  migrations: ["dist/migrations/*{.ts,.js}"],
   autoLoadEntities: true,
-  synchronize: true,
+  synchronize: false,
 };
 export default registerAs("typeorm", () => config);
 export const connectionSource = new DataSource(config as DataSourceOptions);

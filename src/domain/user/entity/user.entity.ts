@@ -12,9 +12,6 @@ export class User {
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column()
-  authentication_id: string;
-
   @Column({ nullable: true })
   first_name: string;
 
@@ -35,10 +32,4 @@ export class User {
 
   @Column({ nullable: true })
   updated_by: string;
-}
-
-interface SupervisorDetails {
-  staffId: string;
-  firstName: string;
-  lastName: string;
 }
