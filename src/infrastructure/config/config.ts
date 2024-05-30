@@ -12,6 +12,7 @@ const config = {
   password: process.env.DATABASE_PASSWORD || "password",
   database: process.env.DATABASE_DATABASE || "init-keycloak",
   entities: ["dist/**/*.entity{.ts,.js}"],
+  migrations: ["migrations/*.{ts,js}"],
   autoLoadEntities: true,
   synchronize: false,
 };

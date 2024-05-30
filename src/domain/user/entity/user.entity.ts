@@ -21,6 +21,9 @@ export class User {
   @Column({ nullable: true })
   email: string;
 
+  @Column({ nullable: true })
+  role: string;
+
   @CreateDateColumn()
   created_at: Date;
 
