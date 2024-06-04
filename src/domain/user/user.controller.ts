@@ -4,7 +4,7 @@ import { ApiTags } from "@nestjs/swagger";
 import { CreateUserInput } from "./model/create-user.input";
 
 @ApiTags("users")
-@Controller()
+@Controller("users")
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

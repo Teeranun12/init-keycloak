@@ -5,6 +5,7 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { AppService } from "./app.service";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { UserModule } from "./domain/user/user.module";
+import { ProductModule } from "./domain/product/product.module";
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { UserModule } from "./domain/user/user.module";
         configService.get("typeorm"),
     }),
     UserModule,
+    ProductModule,
   ],
   providers: [AppService],
 })
