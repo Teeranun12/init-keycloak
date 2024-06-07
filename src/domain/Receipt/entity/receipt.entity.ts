@@ -1,3 +1,5 @@
+import { Book } from "src/domain/Book/entity/book.entity";
+import { Client } from "src/domain/Client/entity/client.controller";
 import {
   Entity,
   PrimaryGeneratedColumn,
@@ -5,6 +7,8 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   DeleteDateColumn,
+  JoinColumn,
+  ManyToOne,
 } from "typeorm";
 
 @Entity()
@@ -26,4 +30,23 @@ export class Receipt {
 
   @UpdateDateColumn()
   updated_at: Date;
+
+  // @JoinColumn({ name: "client_id" })
+  // client: Client;
+
+  @ManyToOne(() => Client)
+  @JoinColumn({ name: "client_id" })
+  client: Client;
+
+  @Column({ nullable: true })
+  client_id: string;
+
+  // @JoinColumn({ name: "book_id" })
+  // book: Book;
+  @ManyToOne(() => Book)
+  @JoinColumn({ name: "book_id" })
+  book: Book;
+
+  @Column({ nullable: true })
+  book_id: string;
 }
