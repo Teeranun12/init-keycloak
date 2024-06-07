@@ -14,7 +14,7 @@ const config = {
   entities: ["dist/**/*.entity{.ts,.js}"],
   migrations: ["migrations/*.{ts,js}"],
   autoLoadEntities: true,
-  synchronize: false,
+  synchronize: true,
 };
 export default registerAs("typeorm", () => config);
 export const connectionSource = new DataSource(config as DataSourceOptions);
