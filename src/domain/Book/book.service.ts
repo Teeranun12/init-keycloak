@@ -30,6 +30,7 @@ export class BookService {
   }
 
   async updateBooks(request: UpdateBookInput) {
+    //TODO: remove unused const
     const existingBook = await this.repo.findOne({ where: { id: request.id } });
     const updatedBook = {
       book_name: request.book_name,

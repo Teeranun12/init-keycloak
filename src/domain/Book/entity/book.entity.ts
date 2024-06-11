@@ -6,7 +6,7 @@ import {
   UpdateDateColumn,
   DeleteDateColumn,
 } from "typeorm";
-
+// TODO : Remove this unse import
 @Entity()
 export class Book {
   @PrimaryGeneratedColumn("uuid")

@@ -6,6 +6,7 @@ import {
   UpdateDateColumn,
   DeleteDateColumn,
 } from "typeorm";
+//TODO: Remove this unused import
 
 @Entity()
 export class User {

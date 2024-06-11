@@ -9,6 +9,8 @@ export class ProductService {
     @InjectRepository(Product)
     private repo: Repository<Product>
   ) {}
+
+  // TODO : ???
   async getProducts() {
     return "res";
   }

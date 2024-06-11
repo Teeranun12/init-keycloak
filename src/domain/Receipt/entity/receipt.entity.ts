@@ -10,6 +10,7 @@ import {
   JoinColumn,
   ManyToOne,
 } from "typeorm";
+// TODO: Remove this unused import
 
 @Entity()
 export class Receipt {

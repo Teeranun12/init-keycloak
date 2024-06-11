@@ -1,6 +1,7 @@
 import { Body, Controller, Get, Patch, Post } from "@nestjs/common";
 import { ApiTags } from "@nestjs/swagger";
 import { ClientService } from "./client.service";
+// TODO: Remove this import and use patth
 import path from "path";
 import { CreateClientInput } from "./model/create-client.input";
 import { UpdateClientInput } from "./model/update-client.input";
@@ -19,12 +20,14 @@ export class ClientController {
   @Post("createClients")
   async createClients(@Body() input: CreateClientInput) {
     const client = await this.clientservice.createClients(input);
+    //TODO: spaces
     return client;
   }
 
   @Patch("updateBooks")
   async updateBooks(@Body() input: UpdateClientInput) {
     const client = await this.clientservice.updateClients(input);
+    //TODO: spaces
     return client;
   }
 

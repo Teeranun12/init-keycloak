@@ -35,6 +35,7 @@ export class ReceiptService {
     const existingReceipt = await this.repo.findOne({
       where: { id: request.id },
     });
+    // TODO: remove unused const
     const updateReceipt = {
       reserve_status: request.reserve_status,
       updated_at: new Date(),
