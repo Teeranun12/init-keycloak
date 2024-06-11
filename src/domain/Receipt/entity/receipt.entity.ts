@@ -1,5 +1,5 @@
 import { Book } from "src/domain/Book/entity/book.entity";
-import { Client } from "src/domain/Client/entity/client.controller";
+import { Client } from "src/domain/Client/entity/client.entity";
 import {
   Entity,
   PrimaryGeneratedColumn,

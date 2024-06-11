@@ -10,16 +10,16 @@ import {
 @Entity()
 export class Book {
   @PrimaryGeneratedColumn("uuid")
-  id: string;
+  id: number;
 
   @Column({ nullable: true })
   book_name: string;
 
   @Column({ nullable: true })
-  book_category: number;
+  book_category: string;
 
   @Column({ nullable: true })
-  book_author: number;
+  book_author: string;
 
   @CreateDateColumn()
   created_at: Date;

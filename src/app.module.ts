@@ -8,7 +8,7 @@ import { UserModule } from "./domain/user/user.module";
 import { ProductModule } from "./domain/product/product.module";
 import { BookModule } from "./domain/Book/book.module";
 import { ClientModule } from "./domain/Client/client.module";
-import { ReceiptModule } from "./domain/Receipt/model/receipt.module";
+import { ReceiptModule } from "./domain/Receipt/receipt.module";
 
 @Module({
   imports: [
