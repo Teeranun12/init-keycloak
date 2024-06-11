@@ -5,6 +5,10 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { AppService } from "./app.service";
 import { ConfigModule, ConfigService } from "@nestjs/config";
 import { UserModule } from "./domain/user/user.module";
+import { ProductModule } from "./domain/product/product.module";
+import { BookModule } from "./domain/Book/book.module";
+import { ClientModule } from "./domain/Client/client.module";
+import { ReceiptModule } from "./domain/Receipt/receipt.module";
 
 @Module({
   imports: [
@@ -18,6 +22,10 @@ import { UserModule } from "./domain/user/user.module";
         configService.get("typeorm"),
     }),
     UserModule,
+    ProductModule,
+    BookModule,
+    ClientModule,
+    ReceiptModule,
   ],
   providers: [AppService],
 })
