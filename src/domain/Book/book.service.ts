@@ -5,6 +5,7 @@ import { Book } from "./entity/book.entity";
 import { CreateBookInput } from "./model/create-book.input";
 import { UpdateBookInput } from "./model/update-book.input";
 import { SearchBookInput } from "./model/search-book.input";
+//TODO: remove unused const
 
 @Injectable()
 export class BookService {
@@ -30,7 +31,6 @@ export class BookService {
   }
 
   async updateBooks(request: UpdateBookInput) {
-    //TODO: remove unused const
     const existingBook = await this.repo.findOne({ where: { id: request.id } });
     const updatedBook = {
       book_name: request.book_name,

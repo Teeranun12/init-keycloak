@@ -6,6 +6,8 @@ import { CreateClientInput } from "./model/create-client.input";
 import { first, last } from "rxjs";
 import { UpdateClientInput } from "./model/update-client.input";
 import { SearchClientInput } from "./model/search-client.input";
+// TODO: Remove this unused import
+// TODO: remove unused functions
 
 @Injectable()
 export class ClientService {
@@ -34,6 +36,7 @@ export class ClientService {
     const existingClient = await this.repo.findOne({
       where: { id: request.id },
     });
+
     const updatedClient = {
       first_name: request.first_name,
       last_name: request.last_name,

@@ -19,6 +19,7 @@ export class ReceiptService {
   }
 
   async createReceipts(request: CreateReceiptInput) {
+    // TODO: async ???
     const newReceipt = {
       reserve_code: request.reserve_code,
       reserve_status: request.reserve_status,
