@@ -18,8 +18,8 @@ import { ReceiptModule } from "./domain/Receipt/receipt.module";
     }),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
-      useFactory: async (configService: ConfigService) =>
-        configService.get("typeorm"),
+      useFactory: async (configService: ConfigService) => configService.get("typeorm"),
+      imports: undefined
     }),
     UserModule,
     ProductModule,
